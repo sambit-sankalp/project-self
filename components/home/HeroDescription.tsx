@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
-import {
-  FaDribbble,
-  FaGithub,
-  FaLinkedin,
-  FaRegEnvelope,
-  FaTwitter,
-} from 'react-icons/fa';
-import { BsFileEarmark, BsFileEarmarkPerson } from 'react-icons/bs';
+// import {
+//   FaGithub,
+//   FaLinkedin,
+//   FaRegEnvelope,
+//   FaTwitter,
+// } from 'react-icons/fa';
+// import { BsFileEarmark, BsFileEarmarkPerson } from 'react-icons/bs';
 import Typed from 'react-typed';
 
 const HeroDescription: FC = () => {
@@ -27,7 +26,8 @@ const HeroDescription: FC = () => {
   return (
     <div className="w-full">
       <h1 className="text-2xl mt-24 md:text-3xl lg:text-4xl">
-        Hey I&apos;m Sambit Sankalp 👋
+        Hey I&apos;m Sambit Sankalp{' '}
+        <span className="wave">👋</span>
       </h1>
       <p className="my-8 text-lg">
         I am a student passionate and enthusiastic about technology and building
@@ -58,7 +58,7 @@ const HeroDescription: FC = () => {
         />
         .
       </p>
-      <div className="flex items-start align-left justify-start mt-4">
+      {/* <div className="flex items-start align-left justify-start mt-4">
         <a
           className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-gray-800 hover:bg-gray-800 rounded-full hover:text-white transition-colors duration-300"
           href="https://github.com/sambit-sankalp"
@@ -98,7 +98,7 @@ const HeroDescription: FC = () => {
           <BsFileEarmarkPerson />
           <span className="sr-only">Email</span>
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

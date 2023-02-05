@@ -9,7 +9,13 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      "sans": ['Open Sans', 'sans-serif'],
+      "spartan": ['League Spartan', 'sans-serif'],
+      "montserrat": ['Montserrat', 'sans-serif'],
+      "roboto": ['Roboto Slab', 'serif'],
+      "titillium": ['Titillium Web', 'sans-serif'],
+    },
   },
   plugins: [],
 };
