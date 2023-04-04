@@ -25,7 +25,7 @@ const HeroDescription: FC = () => {
   ];
   return (
     <div className="w-full">
-      <h1 className="text-2xl mt-24 md:text-3xl lg:text-4xl">
+      <h1 className="text-2xl font-montserrat mt-24 md:text-3xl lg:text-4xl">
         Hey I&apos;m Sambit Sankalp{' '}
         <span className="wave">👋</span>
       </h1>

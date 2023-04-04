@@ -23,7 +23,7 @@ const Skills: FC = () => {
     'Svelte',
   ];
   return (
-    <div className="w-full mt-8 flex flex-col justify-center items-center">
+    <div className="w-full mt-8 flex flex-col justify-center items-start">
       <h1 className="text-3xl mb-3 font-bold text-gray-800">Skills</h1>
       <div className="mx-auto w-full px-4 md:max-w-5xl">
         <Marquee

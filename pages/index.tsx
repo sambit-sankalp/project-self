@@ -4,6 +4,10 @@ import { Inter } from '@next/font/google';
 import { Container } from '@/components/shared/Container';
 import HeroDescription from '@/components/home/HeroDescription';
 import Skills from '@/components/home/Skills';
+import Experience from '@/components/home/Experience';
+import Projects from '@/components/home/Projects';
+import Footer from '@/components/shared/Footer';
+import Header from '@/components/shared/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,6 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
+        <Header />
         <HeroDescription />
         {/* <div className="w-full mt-20 flex flex-row justify-between items-center">
           <HeroDescription />
@@ -27,6 +32,9 @@ export default function Home() {
           />
         </div> */}
         <Skills />
+        <Experience />
+        <Projects />
+        <Footer />
       </Container>
     </>
   );

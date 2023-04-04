@@ -10,12 +10,12 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      "sans": ['Open Sans', 'sans-serif'],
-      "spartan": ['League Spartan', 'sans-serif'],
-      "montserrat": ['Montserrat', 'sans-serif'],
-      "roboto": ['Roboto Slab', 'serif'],
-      "titillium": ['Titillium Web', 'sans-serif'],
+      sans: ['Open Sans', 'sans-serif'],
+      spartan: ['League Spartan', 'sans-serif'],
+      montserrat: ['Montserrat', 'sans-serif'],
+      roboto: ['Roboto Slab', 'serif'],
+      titillium: ['Titillium Web', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
