@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
 import { IconType } from 'react-icons';
-import { BsGlobe2, BsGithub } from 'react-icons/bs';
+import Github from 'public/github.svg';
+import Globe from 'public/globe.svg';
 
 export interface linkInterface {
-  icon: IconType;
+  icon: any;
   name: string;
   url: string;
 }
@@ -21,9 +21,9 @@ export interface experienceInterface {
 export const projectData: experienceInterface[] = [
   {
     title: 'Project Pilot',
-    style: 'flex-row',
+    style: 'normal',
     image:
-      'https://res.cloudinary.com/sambitsankalp/image/upload/v1679481323/mondaymorning_ox9cb5.png',
+      'https://res.cloudinary.com/sambitsankalp/image/upload/v1680775034/pilot_d5srpj.png',
     description: `Pilot is a decentralized Web3 Blogging platform built with Lens Protocol on
         Polygon; its main feature is that it gives users control over the information they
         carry with them throughout a Web3 internet.`,
@@ -31,12 +31,12 @@ export const projectData: experienceInterface[] = [
     technologies: ['React', 'Draft.js', 'Material UI'],
     links: [
       {
-        icon: BsGithub,
+        icon: Github,
         name: 'Github',
         url: 'https://github.com/sambit-sankalp/project-pilot',
       },
       {
-        icon: BsGlobe2,
+        icon: Globe,
         name: 'Website',
         url: 'https://pilot-two.vercel.app/',
       },
@@ -44,21 +44,21 @@ export const projectData: experienceInterface[] = [
   },
   {
     title: 'Project NFTDocket',
-    style: 'flex-row-reverse',
+    style: 'reverse',
     image:
-      'https://res.cloudinary.com/sambitsankalp/image/upload/v1680620598/nftdocket_sffsfb.png',
+      'https://res.cloudinary.com/sambitsankalp/image/upload/v1680774766/nft_docket_jja3qb.png',
     description: `NFTDocket is a Decentralised Warranty Issue platform that can be used by sellers
      to dispatch their warranties to buyers via a NFT built using Polygon.`,
     deployLink: 'https://project-nft-docket.vercel.app/',
     technologies: ['React', 'Web3', 'Solidity', 'Polygon', 'Tailwind CSS'],
     links: [
       {
-        icon: BsGithub,
+        icon: Github,
         name: 'Github',
         url: 'https://github.com/Sibasis-Malla/project-NFTDocket',
       },
       {
-        icon: BsGlobe2,
+        icon: Globe,
         name: 'Website',
         url: 'https://project-nft-docket.vercel.app/',
       },

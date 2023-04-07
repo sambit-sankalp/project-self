@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import Marquee from 'react-fast-marquee';
 import SkillCard from '@/components/skills/SkillCard';
 import { skillsData } from '@/content/skills';
+import SectionTitle from '../shared/SectionTitle';
 
 const Skills: FC = () => {
   const talkAbout: string[] = [
@@ -24,7 +25,7 @@ const Skills: FC = () => {
   ];
   return (
     <div className="w-full mt-8 flex flex-col justify-center items-start">
-      <h1 className="text-3xl mb-3 font-bold text-gray-800">Skills</h1>
+      <SectionTitle title="Skills" />
       <div className="mx-auto w-full px-4 md:max-w-5xl">
         <Marquee
           gradient={false}

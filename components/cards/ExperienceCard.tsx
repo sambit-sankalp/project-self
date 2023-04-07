@@ -52,7 +52,9 @@ const ExperienceCard: FC<ExperienceCardProps> = ({ data }) => {
         <strong>Technologies: </strong>
         {technologies.join(', ')}
       </p>
-      <ReactMarkdown className="ml-6 text-lg">{description}</ReactMarkdown>
+      <ReactMarkdown className="ml-6 text-sm md:text-base mt-3 md:mt-0">
+        {description}
+      </ReactMarkdown>
     </div>
   );
 };

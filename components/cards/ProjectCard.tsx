@@ -3,65 +3,53 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import { BsGlobe2, BsGithub } from 'react-icons/bs';
-
 type ProjectDataProps = {
   data: experienceInterface;
 };
 
 const ProjectCard = ({ data }: ProjectDataProps) => {
-  const skills = [
-    'React',
-    'Next.js',
-    'TypeScript',
-    'Tailwind CSS',
-    'Node.js',
-    'Express.js',
-  ];
-  const links = [
-    {
-      icon: <BsGithub />,
-      name: 'Github',
-      url: 'https://github.com/Monday-Morning/project-tahiti',
-    },
-    {
-      icon: <BsGlobe2 />,
-      name: 'Website',
-      url: 'https://mondaymorning.nitrkl.ac.in/',
-    },
-  ];
   return (
-    <div className="w-full flex justify-center my-3 items-center min-h-[400px] overflow-hidden bg-[#f3f3f6] rounded-md ">
+    <div className="w-full flex justify-center my-3 p-3 md:p-0 items-center min-h-[400px] overflow-hidden bg-[#f3f3f6] rounded-md ">
       <div
-        className={`w-full min-w-[800px] flex ${
+        className={`w-full md:min-w-[800px] flex ${
           data.style
-        } justify-between items-start gap-20 ${
-          data.style === 'flex-row' ? 'mr-80' : 'ml-80'
+        } justify-center md:justify-between items-center md:items-start gap-5 md:gap-20 ${
+          data.style === 'normal'
+            ? 'mr-0 md:mr-52 lg:mr-80 flex-col md:flex-row '
+            : 'ml-0 md:ml-52 lg:ml-80 flex-col md:flex-row-reverse'
         }`}
       >
-        <Image src={data.image} alt={data.title} width={500} height={500} />
-        <div className="w-full flex flex-col justify-between items-start mt-0 min-w-[50%]">
+        <Image
+          src={data.image}
+          alt={data.title}
+          width={500}
+          height={500}
+          className="w-[250px] md:w-[400px] lg:w-[500px]"
+        />
+        <div className="w-full flex flex-col justify-center md:justify-between items-center md:items-start mt-0 min-w-[50%]">
           <Link
             href={data.deployLink}
             target="_blank"
             rel="noopener noreferrer"
             className="underlined relative"
           >
-            <h3 className="font-bold text-[40px]">{data.title}</h3>
+            <h3 className="font-bold text-2xl lg:text-[30px]">{data.title}</h3>
           </Link>
-          <p className="text-base mt-2">{data.description}</p>
-          <p className="mt-4">
-            {skills.map((skill, index) => (
+          <p className="text-sm lg:text-base mt-2 mx-3 text-center md:text-left md:mx-0">
+            {data.description}
+          </p>
+          <p className="mt-4 mx-2 md:mx-0 flex justify-center md:justify-start items-center md:items-start flex-wrap">
+            {data.technologies.map((skill, index) => (
               <span
                 key={`${index}-${skill}`}
-                className="mr-2 my-1 text-sm inline-flex items-center font-bold leading-sm px-3 py-1 bg-blue-200 text-blue-700 rounded-full"
+                className="mr-2 my-1 text-xs lg:text-sm inline-flex items-center font-bold leading-sm px-3 py-1 bg-blue-200 text-blue-700 rounded-full"
               >
                 {skill}
               </span>
             ))}
           </p>
           <div className="flex justify-center items-center mt-4">
-            {links.map(({ name, url, icon }, index) => (
+            {data.links.map(({ name, url, icon }, index) => (
               <React.Fragment key={`${url}-${index}`}>
                 <Link
                   href={url}
@@ -69,8 +57,14 @@ const ProjectCard = ({ data }: ProjectDataProps) => {
                   rel="noopener noreferrer"
                   className="text-sm inline-flex items-center font-bold leading-sm px-3 py-1 rounded-full"
                 >
-                  {icon}
-                  <p className="mx-2">{name}</p>
+                  <Image
+                    src={icon}
+                    className="mx-2"
+                    alt={name}
+                    width={19}
+                    height={19}
+                  />
+                  <p className="ml-0.5 text-xs md:text-base">{name}</p>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -81,7 +75,7 @@ const ProjectCard = ({ data }: ProjectDataProps) => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="feather feather-arrow-right"
+                    className="feather feather-arrow-right hidden md:block"
                   >
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
