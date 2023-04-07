@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import { Inter } from '@next/font/google';
 import { Container } from '@/components/shared/Container';
 import HeroDescription from '@/components/home/HeroDescription';
 import Skills from '@/components/home/Skills';
@@ -8,8 +6,8 @@ import Experience from '@/components/home/Experience';
 import Projects from '@/components/home/Projects';
 import Footer from '@/components/shared/Footer';
 import Header from '@/components/shared/Header';
+import Education from '@/components/home/Education';
 
-const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
   return (
@@ -23,17 +21,10 @@ export default function Home() {
       <Container>
         <Header />
         <HeroDescription />
-        {/* <div className="w-full mt-20 flex flex-row justify-between items-center">
-          <HeroDescription />
-          <Card
-            name="Sambit Sankalp"
-            title="Full Stack Devloper"
-            social={{ github: '/', dribbble: '/', twitter: '/', email: '/' }}
-          />
-        </div> */}
         <Skills />
         <Experience />
         <Projects />
+        <Education />
         <Footer />
       </Container>
     </>

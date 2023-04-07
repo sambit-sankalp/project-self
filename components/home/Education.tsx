@@ -1,15 +1,14 @@
 import React from 'react';
-import { About } from '../cards/EducationCard';
+import { EducationCard } from '../cards/EducationCard';
+import SectionTitle from '../shared/SectionTitle';
 
-type Props = {};
-
-const Education = (props: Props) => {
+const Education = () => {
   return (
     <>
       <div className="w-full mt-8 flex flex-col justify-center items-start">
-        <h1 className="text-3xl mb-3 font-bold text-gray-800">Experience</h1>
+        <SectionTitle title="Education" />
       </div>
-      <About />
+      <EducationCard />
     </>
   );
 };
