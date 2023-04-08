@@ -2,6 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 import { FaCalendar } from 'react-icons/fa';
+
 import { educationData } from '@/content/education';
 
 export const PageWrapper: FC<{ children: ReactNode; className: string }> = ({

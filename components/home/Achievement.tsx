@@ -1,6 +1,8 @@
 import React from 'react';
+
 import SectionTitle from '../shared/SectionTitle';
 import AchievementCard from '../cards/AchievementCard';
+
 import { achivement } from '@/content/achievement';
 
 type Props = {};
@@ -8,7 +10,10 @@ type Props = {};
 const Achievement = () => {
   return (
     <>
-      <div className="w-full mt-8 flex flex-col justify-center items-start">
+      <div
+        id="achievement"
+        className="w-full mt-8 flex flex-col justify-center items-start"
+      >
         <SectionTitle title="Achivements" />
       </div>
       {achivement.map((data, index) => (

@@ -3,7 +3,10 @@ import { BsArrowRight } from 'react-icons/bs';
 
 const ContactCard = () => {
   return (
-    <div className="w-full p-3 px-5 mt-10 md:mt-14 mb-5 sm:py-4 bg-[#000] text-white rounded-md border border-transparent hover:border hover:border-black">
+    <div
+      id="contact"
+      className="w-full p-3 px-5 mt-10 md:mt-14 mb-5 sm:py-4 bg-[#000] text-white rounded-md border border-transparent hover:border hover:border-black"
+    >
       <div className="flex justify-center items-center space-x-4">
         <div className="flex-1 min-w-0">
           <p className="text-sm md:text-lg font-bold text-white dark:text-white">

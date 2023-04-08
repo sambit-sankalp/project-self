@@ -1,16 +1,33 @@
 import Head from 'next/head';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
+// components
 import { Container } from '@/components/shared/Container';
-import HeroDescription from '@/components/home/HeroDescription';
-import Skills from '@/components/home/Skills';
-import Experience from '@/components/home/Experience';
-import Projects from '@/components/home/Projects';
+import {
+  About,
+  Skills,
+  Experience,
+  Projects,
+  Education,
+  Achievement,
+  Contact,
+} from '@/components/home';
 import Footer from '@/components/shared/Footer';
 import Header from '@/components/shared/Header';
-import Education from '@/components/home/Education';
-import Achievement from '@/components/home/Achievement';
-import ContactCard from '@/components/home/ContactCard';
 
 export default function Home() {
+  const router = useRouter();
+  const { asPath } = router;
+
+  useEffect(() => {
+    const hash = asPath.split('#')[1];
+    router.push({ hash }, undefined, {
+      shallow: true,
+      scroll: false,
+    });
+  }, [router, asPath]);
+
   return (
     <>
       <Head>
@@ -21,13 +38,13 @@ export default function Home() {
       </Head>
       <Container>
         <Header />
-        <HeroDescription />
+        <About />
         <Skills />
         <Experience />
         <Projects />
         <Education />
         <Achievement />
-        <ContactCard />
+        <Contact />
         <Footer />
       </Container>
     </>

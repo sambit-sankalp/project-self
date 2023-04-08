@@ -1,10 +1,10 @@
-import Image from 'next/image';
 import React, { FC } from 'react';
-
-import award from 'public/award.svg';
-import { AiOutlineRight } from 'react-icons/ai';
-import { AchievementProps } from '@/content/achievement';
+import Image from 'next/image';
 import Link from 'next/link';
+import { AiOutlineRight } from 'react-icons/ai';
+
+import { AchievementProps } from '@/content/achievement';
+import award from 'public/award.svg';
 
 const AchievementCard: FC<AchievementProps> = ({ title, event, date, url }) => {
   return (

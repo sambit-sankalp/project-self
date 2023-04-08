@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaGraduationCap } from 'react-icons/fa';
 import { GrDocumentPdf } from 'react-icons/gr';
 
 type Props = {};

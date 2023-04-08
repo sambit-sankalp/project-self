@@ -1,6 +1,7 @@
-import { socialIcons } from '@/content/marginals';
 import Image from 'next/image';
 import React from 'react';
+
+import { socialIcons } from '@/content/marginals';
 
 const Footer = () => {
   return (

@@ -1,11 +1,4 @@
 import React, { FC } from 'react';
-// import {
-//   FaGithub,
-//   FaLinkedin,
-//   FaRegEnvelope,
-//   FaTwitter,
-// } from 'react-icons/fa';
-// import { BsFileEarmark, BsFileEarmarkPerson } from 'react-icons/bs';
 import Typed from 'react-typed';
 
 const HeroDescription: FC = () => {
