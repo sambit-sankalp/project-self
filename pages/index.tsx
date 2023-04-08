@@ -7,7 +7,8 @@ import Projects from '@/components/home/Projects';
 import Footer from '@/components/shared/Footer';
 import Header from '@/components/shared/Header';
 import Education from '@/components/home/Education';
-
+import Achievement from '@/components/home/Achievement';
+import ContactCard from '@/components/home/ContactCard';
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
         <Experience />
         <Projects />
         <Education />
+        <Achievement />
+        <ContactCard />
         <Footer />
       </Container>
     </>

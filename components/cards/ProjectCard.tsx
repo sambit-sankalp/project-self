@@ -48,14 +48,14 @@ const ProjectCard = ({ data }: ProjectDataProps) => {
               </span>
             ))}
           </p>
-          <div className="flex justify-center items-center mt-4">
+          <div className="flex justify-center items-center md:items-start mt-4">
             {data.links.map(({ name, url, icon }, index) => (
               <React.Fragment key={`${url}-${index}`}>
                 <Link
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm inline-flex items-center font-bold leading-sm px-3 py-1 rounded-full"
+                  className="text-sm inline-flex items-center font-bold leading-sm py-1 mr-2 rounded-full"
                 >
                   <Image
                     src={icon}
