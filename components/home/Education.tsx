@@ -5,12 +5,15 @@ import SectionTitle from '../shared/SectionTitle';
 
 const Education = () => {
   return (
-    <>
-      <div id="education" className="w-full mt-8 flex flex-col justify-center items-start">
+    <div className="w-full">
+      <div
+        id="education"
+        className="w-full mt-8 flex flex-col justify-center items-start"
+      >
         <SectionTitle title="Education" />
       </div>
       <EducationCard />
-    </>
+    </div>
   );
 };
 

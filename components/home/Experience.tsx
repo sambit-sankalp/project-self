@@ -9,7 +9,7 @@ const Experience = () => {
     <>
       <div
         id="experience"
-        className="w-full my-8 flex flex-col justify-center items-start"
+        className="w-full my-8 mt-12 flex flex-col justify-center items-start"
       >
         <SectionTitle title="Experience" />
         {experienceData.map((experience) => (

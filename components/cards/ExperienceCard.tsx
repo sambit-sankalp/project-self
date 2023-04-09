@@ -19,7 +19,7 @@ const ExperienceCard: FC<ExperienceCardProps> = ({ data }) => {
     technologies,
   } = data;
   return (
-    <div className="w-full p-2 bg-[#f3f3f6] rounded-md mt-5">
+    <div className="w-full hover:cursor-pointer hover:shadow-lg p-2 bg-[#f3f3f6] rounded-md mt-5">
       <div className="flex gap-4 items-start md:items-center">
         <Image
           src={companyLogo}

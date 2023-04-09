@@ -1,6 +1,7 @@
 import { IconType } from 'react-icons';
 import Github from 'public/github.svg';
 import Globe from 'public/globe.svg';
+import Playstore from 'public/playstore.svg';
 
 export interface linkInterface {
   icon: any;
@@ -11,6 +12,7 @@ export interface linkInterface {
 export interface experienceInterface {
   title: string;
   style: string;
+  isWeb: boolean;
   image: string;
   deployLink: string;
   description: string;
@@ -20,8 +22,79 @@ export interface experienceInterface {
 
 export const projectData: experienceInterface[] = [
   {
-    title: 'Project Pilot',
+    title: 'Project NFTDocket',
     style: 'normal',
+    isWeb: true,
+    image:
+      'https://res.cloudinary.com/sambitsankalp/image/upload/v1680774766/nft_docket_jja3qb.png',
+    description: `NFTDocket is a Decentralised Warranty Issue platform that can be used by sellers
+     to dispatch their warranties to buyers via a NFT built using Polygon.`,
+    deployLink: 'https://project-nft-docket.vercel.app/',
+    technologies: ['React', 'Web3', 'Solidity', 'Polygon', 'Tailwind CSS'],
+    links: [
+      {
+        icon: Github,
+        name: 'Github',
+        url: 'https://github.com/sambit-sankalp/project-nftdocket',
+      },
+      {
+        icon: Globe,
+        name: 'Website',
+        url: 'https://project-nft-docket.vercel.app/',
+      },
+    ],
+  },
+  {
+    title: 'Project Pegasus',
+    style: 'reverse',
+    isWeb: false,
+    image:
+      'https://res.cloudinary.com/sambitsankalp/image/upload/v1681042550/App_haksj4.png',
+    description: `The cross-platform Mobile application of the Monday Morning which is a weekly
+     e-newsletter serves as a news feed for the students, professors and alumni of the institute.`,
+    deployLink:
+      'https://play.google.com/store/apps/details?id=in.ac.nitrkl.mondaymorning',
+    technologies: ['Flutter', 'Riverpod', 'Firebase'],
+    links: [
+      // {
+      //   icon: Github,
+      //   name: 'Github',
+      //   url: 'https://github.com/Monday-Morning/project-pegasus',
+      // },
+      {
+        icon: Playstore,
+        name: 'Playstore',
+        url: 'https://play.google.com/store/apps/details?id=in.ac.nitrkl.mondaymorning',
+      },
+    ],
+  },
+  {
+    title: 'Project Tedx',
+    style: 'normal',
+    isWeb: true,
+    image:
+      'https://res.cloudinary.com/sambitsankalp/image/upload/v1681051186/Tedx_ahvmt6.png',
+    description: `TEDxNITRourkela is an independently organized TED event 
+    coordinated and curated by a group of NIT Rourkela students.`,
+    deployLink: 'https://tedxnitrourkela.com/',
+    technologies: ['React', 'Javascript'],
+    links: [
+      {
+        icon: Github,
+        name: 'Github',
+        url: 'https://github.com/sambit-sankalp/website-v2',
+      },
+      {
+        icon: Globe,
+        name: 'Website',
+        url: 'https://tedxnitrourkela.com/',
+      },
+    ],
+  },
+  {
+    title: 'Project Pilot',
+    style: 'reverse',
+    isWeb: true,
     image:
       'https://res.cloudinary.com/sambitsankalp/image/upload/v1680775034/pilot_d5srpj.png',
     description: `Pilot is a decentralized Web3 Blogging platform built with Lens Protocol on
@@ -39,28 +112,6 @@ export const projectData: experienceInterface[] = [
         icon: Globe,
         name: 'Website',
         url: 'https://pilot-two.vercel.app/',
-      },
-    ],
-  },
-  {
-    title: 'Project NFTDocket',
-    style: 'reverse',
-    image:
-      'https://res.cloudinary.com/sambitsankalp/image/upload/v1680774766/nft_docket_jja3qb.png',
-    description: `NFTDocket is a Decentralised Warranty Issue platform that can be used by sellers
-     to dispatch their warranties to buyers via a NFT built using Polygon.`,
-    deployLink: 'https://project-nft-docket.vercel.app/',
-    technologies: ['React', 'Web3', 'Solidity', 'Polygon', 'Tailwind CSS'],
-    links: [
-      {
-        icon: Github,
-        name: 'Github',
-        url: 'https://github.com/Sibasis-Malla/project-NFTDocket',
-      },
-      {
-        icon: Globe,
-        name: 'Website',
-        url: 'https://project-nft-docket.vercel.app/',
       },
     ],
   },

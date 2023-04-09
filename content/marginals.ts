@@ -1,5 +1,3 @@
-import React from 'react';
-import { BsGlobe2, BsGithub } from 'react-icons/bs';
 import Github from 'public/github.svg';
 import Linkedin from 'public/linkedin.svg';
 import Email from 'public/email.svg';
@@ -8,6 +6,12 @@ export interface footerLinkInterface {
   icon: string;
   name: string;
   url: string;
+}
+
+interface headerInterface {
+  name: string;
+  imageUrl: string;
+  resumeLink: string;
 }
 
 export const socialIcons: footerLinkInterface[] = [
@@ -27,3 +31,11 @@ export const socialIcons: footerLinkInterface[] = [
     url: 'mailto:sambit.sankalp.official@gmail.com',
   },
 ];
+
+export const headerData: headerInterface = {
+  name: 'Sambit Sankalp',
+  imageUrl:
+    'https://res.cloudinary.com/sambitsankalp/image/upload/v1680622552/82284130_thuxay.png',
+  resumeLink:
+    'https://drive.google.com/file/d/1sRoztaIu5t-czTvY-OAIo1fgiHrQVKK-/view',
+};

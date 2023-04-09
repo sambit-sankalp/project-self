@@ -14,13 +14,19 @@ const ContactCard = () => {
           </p>
         </div>
         <div className="flex justify-center items-center text-base font-semibold text-gray-900 dark:text-white">
-          <button
-            type="button"
-            className="flex justify-center items-center text-white border border-white hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-2 md:px-5 py-1 md:py-2.5 text-center"
+          <a
+            href="mailto:sambit.sankalp.official@gmail.com"
+            target="_blank"
+            rel="noreferrer"
           >
-            Connect
-            <BsArrowRight className="ml-2" />
-          </button>
+            <button
+              type="button"
+              className="flex justify-center items-center text-white border border-white hover:bg-white hover:text-gray-900 font-medium rounded-lg text-sm px-2 md:px-5 py-1 md:py-2.5 text-center"
+            >
+              Connect
+              <BsArrowRight className="ml-2" />
+            </button>
+          </a>
         </div>
       </div>
     </div>

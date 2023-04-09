@@ -10,22 +10,30 @@ type ProjectDataProps = {
 
 const ProjectCard = ({ data }: ProjectDataProps) => {
   return (
-    <div className="w-full flex justify-center my-3 p-3 md:p-0 items-center min-h-[400px] overflow-hidden bg-[#f3f3f6] rounded-md ">
+    <div className="w-full flex justify-center hover:shadow-lg hover:cursor-pointer my-3 p-3 md:p-0 items-center min-h-[400px] overflow-hidden bg-[#f3f3f6] rounded-md ">
       <div
         className={`w-full md:min-w-[800px] flex ${
           data.style
         } justify-center md:justify-between items-center md:items-start gap-5 md:gap-20 ${
           data.style === 'normal'
-            ? 'mr-0 md:mr-52 lg:mr-80 flex-col md:flex-row '
-            : 'ml-0 md:ml-52 lg:ml-80 flex-col md:flex-row-reverse'
+            ? `${
+                data.isWeb ? 'mr-0 md:mr-52 lg:mr-80' : 'mx-0 md:mx-52 lg:mx-80'
+              } flex-col md:flex-row `
+            : `${
+                data.isWeb ? 'ml-0 md:ml-52 lg:ml-80' : 'mx-0 md:mx-52 lg:mx-80'
+              } flex-col md:flex-row-reverse`
         }`}
       >
         <Image
           src={data.image}
           alt={data.title}
           width={500}
-          height={500}
-          className="w-[250px] md:w-[400px] lg:w-[500px]"
+          height={200}
+          className={`${
+            data.isWeb
+              ? 'w-[250px] md:w-[400px] lg:w-[500px]'
+              : 'h-[130px] md:h-[250px] w-[70px] md:w-[140px]'
+          }`}
         />
         <div className="w-full flex flex-col justify-center md:justify-between items-center md:items-start mt-0 min-w-[50%]">
           <Link
@@ -36,7 +44,11 @@ const ProjectCard = ({ data }: ProjectDataProps) => {
           >
             <h3 className="font-bold text-2xl lg:text-[30px]">{data.title}</h3>
           </Link>
-          <p className="text-sm lg:text-base mt-2 mx-3 text-center md:text-left md:mx-0">
+          <p
+            className={`${
+              !data.isWeb && 'w-full md:w-9/12'
+            } text-sm lg:text-base mt-2 mx-3 text-center md:text-left md:mx-0`}
+          >
             {data.description}
           </p>
           <p className="mt-4 mx-2 md:mx-0 flex justify-center md:justify-start items-center md:items-start flex-wrap">
@@ -76,7 +88,7 @@ const ProjectCard = ({ data }: ProjectDataProps) => {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="feather feather-arrow-right hidden md:block"
+                    className="feather feather-arrow-right hidden md:block ml-2"
                   >
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>

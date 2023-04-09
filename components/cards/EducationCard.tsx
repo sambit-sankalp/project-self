@@ -25,15 +25,15 @@ export const EducationCard = () => {
     <>
       <PageSection>
         <PageWrapper
-          className="mb-2"
+          className="mb-2 w-full"
           aria-label="You are now in my educational background section"
         >
           <article>
-            <ul className="timeline">
+            <ul className="w-full timeline">
               {educationData.map(
-                ({ degree, school, date, url, description }, index) => (
-                  <li key={`${index}-${url}`}>
-                    <div className="flex justify-between flex-col md:flex-row items-start">
+                ({ degree, school, date, url }, index) => (
+                  <li key={`${index}-${url}`} className="w-full">
+                    <div className="w-full flex justify-between flex-col md:flex-row items-start">
                       <Link
                         target="_blank"
                         rel="noopener noreferrer"
@@ -41,19 +41,20 @@ export const EducationCard = () => {
                         href={url}
                         className="flex flex-col justify-center items-start"
                       >
-                        <h1 className="font-bold text-lg md:text-xl">
-                          {degree}
-                        </h1>
-                        <h5 className="font-semibold text-sm md:text-base mb-1">
-                          {school}
-                        </h5>
+                        <div>
+                          <h1 className="font-bold text-lg md:text-xl">
+                            {degree}
+                          </h1>
+                          <h5 className="font-semibold text-sm md:text-base mb-1">
+                            {school}
+                          </h5>
+                        </div>
                       </Link>
                       <p className="float-right flex justify-center items-center">
                         <FaCalendar className="mr-1 md:mr-2 w-3 h-3 md:w-4 md:h-4" />{' '}
                         <span className="text-sm md:text-base">{date}</span>
                       </p>
                     </div>
-                    <p>{description}</p>
                   </li>
                 )
               )}
@@ -71,6 +72,7 @@ const PageSection = styled.div`
     font-weight: 900;
     margin: 4rem 0rem 1.5rem;
     position: relative;
+    width: 100%;
   }
   h4 {
     font-size: calc(var(--font-md) + 1.5px);
