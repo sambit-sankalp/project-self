@@ -16,8 +16,8 @@ export const experienceData: experienceInterface[] = [
     companyLogo:
       'https://res.cloudinary.com/sambitsankalp/image/upload/v1679692378/hw_cwprpd.png',
     companyLink: 'https://www.thehomeworkapp.ai/',
-    description: `- Collaborated with a team of software engineers and product managers to improve the product in terms of performance and functionality
-    - Worked on optimising API by adding the pagination and implementing caching using webhooks of hasura resulting in API improving the performance of website by factor of 4.
+    description: `- Collaborated with a team of software engineers and product managers to improve the product in terms of performance and functionality.
+    - Worked on optimising API by adding the pagination and implementing caching using webhooks of hasura resulting in API improving the performance of website.
     - Worked on developing tracking migration progress screens and fixed various dashboard bugs to improve the existing functionalities of dashboard websites.
     - Integrated dashboard with various hasura subscription, mutation and queries.
     `,

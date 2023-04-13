@@ -36,6 +36,5 @@ export const headerData: headerInterface = {
   name: 'Sambit Sankalp',
   imageUrl:
     'https://res.cloudinary.com/sambitsankalp/image/upload/v1680622552/82284130_thuxay.png',
-  resumeLink:
-    'https://drive.google.com/file/d/1sRoztaIu5t-czTvY-OAIo1fgiHrQVKK-/view',
+  resumeLink: '/resume.pdf',
 };

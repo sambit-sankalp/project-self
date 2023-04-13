@@ -3,6 +3,7 @@ import React from 'react';
 import { GrDocumentPdf } from 'react-icons/gr';
 
 import { headerData } from '@/content/marginals';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -19,7 +20,7 @@ const Header = () => {
           {headerData.name}
         </h1>
       </div>
-      <a href={headerData.resumeLink} target="_blank" rel="noreferrer">
+      <Link href={headerData.resumeLink} target="_blank" rel="noreferrer">
         <button
           type="button"
           className="text-black bg-slate-200 flex justify-center items-center focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2"
@@ -27,7 +28,7 @@ const Header = () => {
           <GrDocumentPdf />
           <span className="ml-1 hidden sm:block">Resume</span>
         </button>
-      </a>
+      </Link>
     </div>
   );
 };
