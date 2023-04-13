@@ -9,11 +9,11 @@ const ContactCard = () => {
     >
       <div className="flex justify-center items-center space-x-4">
         <div className="flex-1 min-w-0">
-          <p className="text-sm md:text-lg font-bold text-white dark:text-white">
+          <p className="text-sm md:text-lg font-bold text-white">
             Let&apos;s connect!
           </p>
         </div>
-        <div className="flex justify-center items-center text-base font-semibold text-gray-900 dark:text-white">
+        <div className="flex justify-center items-center text-base font-semibold text-gray-900">
           <a
             href="mailto:sambit.sankalp.official@gmail.com"
             target="_blank"

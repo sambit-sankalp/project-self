@@ -14,7 +14,7 @@ const SkillCard: FC<SkillProps> = ({ name, svg }) => {
           className="w-7 h-7 md:w-10 md:h-10"
           alt={name}
         />
-        <h1 className="text-sm md:text-base mt-1 font-medium text-gray-900 dark:text-white">
+        <h1 className="text-sm md:text-base mt-1 font-medium text-gray-900">
           {name}
         </h1>
       </div>

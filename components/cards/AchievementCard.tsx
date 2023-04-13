@@ -21,19 +21,19 @@ const AchievementCard: FC<AchievementProps> = ({ title, event, date, url }) => {
             />
           </div>
           <div className="flex-1 min-w-0">
-            <p className="text-base md:text-lg font-bold text-gray-900 dark:text-white">
+            <p className="text-base md:text-lg font-bold text-gray-900">
               {title}
             </p>
-            <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+            <p className="text-sm font-semibold text-gray-500">
               {event}
             </p>
           </div>
-          <div className="group/edit visible inline-flex items-center text-base font-semibold text-gray-900 dark:text-white group-hover/item:invisible">
-            <p className="text-sm md:text-base text-gray-900 dark:text-white">
+          <div className="group/edit visible inline-flex items-center text-base font-semibold text-gray-900 group-hover/item:invisible">
+            <p className="text-sm md:text-base text-gray-900">
               {date}
             </p>
           </div>
-          <div className="group/edit invisible inline-flex items-center text-base font-semibold text-gray-900 dark:text-white group-hover/item:visible">
+          <div className="group/edit invisible inline-flex items-center text-base font-semibold text-gray-900 group-hover/item:visible">
             <AiOutlineRight className="mr-2" />
           </div>
         </div>
