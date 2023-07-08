@@ -10,8 +10,21 @@ export interface experienceInterface {
 
 export const experienceData: experienceInterface[] = [
   {
+    company: 'Micorsoft India Pvt Ltd',
+    position: 'Software Engineering Intern',
+    date: 'May 2023 - June 2023',
+    companyLogo:
+      'https://res.cloudinary.com/sambitsankalp/image/upload/v1688819590/2048px-Microsoft_logo.svg_sbsuqt.png',
+    companyLink: 'https://www.microsoft.com/',
+    description: `- Worked on creating meaningful and interactive graph visualization library to analyse the numeric CSV data for analyst using WebGL and d3-force.
+    - Enhanced force and data computation algorithms, adjusting force strength and utilizing web workers, boosting graph performance by 33%.
+    - Along with adding meaningfulness and interactivity, made the graph informative for the analyst on interaction with the graph.
+    `,
+    technologies: ['Typescript', 'HTML', 'CSS', 'WebGL', 'Three.js', 'D3.js'],
+  },
+  {
     company: 'InfyBytes AI Labs',
-    position: 'Full Stack Developer',
+    position: 'Full Stack Developer Intern',
     date: 'Jan 2023 - Apr 2023',
     companyLogo:
       'https://res.cloudinary.com/sambitsankalp/image/upload/v1679692378/hw_cwprpd.png',
@@ -24,7 +37,6 @@ export const experienceData: experienceInterface[] = [
     technologies: [
       'React',
       'Next.js',
-      'Typescript',
       'HTML',
       'CSS',
       'Typescript',
@@ -40,7 +52,7 @@ export const experienceData: experienceInterface[] = [
   },
   {
     company: 'Skilzen',
-    position: 'Frontend Developer',
+    position: 'Frontend Developer Intern',
     date: 'Feb 2023 - Apr 2023',
     companyLogo:
       'https://res.cloudinary.com/sambitsankalp/image/upload/v1679852533/skilzen_mgmdih.jpg',

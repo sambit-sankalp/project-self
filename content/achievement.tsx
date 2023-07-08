@@ -20,7 +20,7 @@ export const achivement: AchievementProps[] = [
   },
   {
     title: 'Best Women Empowerment Track Prize',
-    event: 'StormHacks 2022',
+    event: 'Girls Hoo Hacks 2021',
     date: 'Nov 2021',
     url: 'https://devpost.com/software/codhersgram',
   },
