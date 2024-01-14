@@ -33,7 +33,7 @@ export default function Home() {
     <>
       <Head>
         <title>Sambit Sankalp</title>
-        <meta name="description" content="Developer | Designer" />
+        <meta name="description" content="Developer | Freelancer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

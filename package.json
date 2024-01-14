@@ -14,6 +14,7 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/styled-components": "^5.1.26",
+    "caniuse-lite": "^1.0.30001571",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",

@@ -7,6 +7,12 @@ export interface AchievementProps {
 
 export const achivement: AchievementProps[] = [
   {
+    title: 'Top 13 Best Projects and Top 3 Unique projects of Filecoin',
+    event: 'ETHIndia',
+    date: 'Dec 2023',
+    url: 'https://devfolio.co/projects/phoenixfi-9a88',
+  },
+  {
     title: 'Best use of Filecoin Prize',
     event: 'ETHforAll',
     date: 'Mar 2023',

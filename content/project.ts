@@ -7,6 +7,8 @@ export interface linkInterface {
   icon: any;
   name: string;
   url: string;
+  width?: number;
+  height?: number;
 }
 
 export interface experienceInterface {
@@ -35,11 +37,15 @@ export const projectData: experienceInterface[] = [
       {
         icon: Github,
         name: 'Github',
+        width: 20,
+        height: 20,
         url: 'https://github.com/sambit-sankalp/project-nftdocket',
       },
       {
         icon: Globe,
         name: 'Website',
+        width: 17,
+        height: 17,
         url: 'https://project-nft-docket.vercel.app/',
       },
     ],
@@ -56,14 +62,18 @@ export const projectData: experienceInterface[] = [
       'https://play.google.com/store/apps/details?id=in.ac.nitrkl.mondaymorning',
     technologies: ['Flutter', 'Riverpod', 'Firebase'],
     links: [
-      // {
-      //   icon: Github,
-      //   name: 'Github',
-      //   url: 'https://github.com/Monday-Morning/project-pegasus',
-      // },
+      {
+        icon: Github,
+        name: 'Github',
+        width: 20,
+        height: 20,
+        url: 'https://github.com/Monday-Morning/project-pegasus',
+      },
       {
         icon: Playstore,
         name: 'Playstore',
+        width: 20,
+        height: 20,
         url: 'https://play.google.com/store/apps/details?id=in.ac.nitrkl.mondaymorning',
       },
     ],
@@ -82,11 +92,15 @@ export const projectData: experienceInterface[] = [
       {
         icon: Github,
         name: 'Github',
+        width: 20,
+        height: 20,
         url: 'https://github.com/sambit-sankalp/website-v2',
       },
       {
         icon: Globe,
         name: 'Website',
+        width: 18,
+        height: 18,
         url: 'https://tedxnitrourkela.com/',
       },
     ],
@@ -106,11 +120,15 @@ export const projectData: experienceInterface[] = [
       {
         icon: Github,
         name: 'Github',
+        width: 20,
+        height: 20,
         url: 'https://github.com/sambit-sankalp/project-pilot',
       },
       {
         icon: Globe,
         name: 'Website',
+        width: 18,
+        height: 18,
         url: 'https://pilot-two.vercel.app/',
       },
     ],
