@@ -1,4 +1,3 @@
-import { IconType } from 'react-icons';
 import Github from 'public/github.svg';
 import Globe from 'public/globe.svg';
 import Playstore from 'public/playstore.svg';

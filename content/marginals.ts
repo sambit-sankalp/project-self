@@ -1,6 +1,7 @@
 import Github from 'public/github.svg';
 import Linkedin from 'public/linkedin.svg';
 import Email from 'public/email.svg';
+import Twitter from 'public/twitter.svg';
 
 export interface footerLinkInterface {
   icon: string;
@@ -15,6 +16,11 @@ interface headerInterface {
 }
 
 export const socialIcons: footerLinkInterface[] = [
+  {
+    icon: Twitter,
+    name: 'Twitter',
+    url: 'https://twitter.com/sambit_sankalp',
+  },
   {
     icon: Github,
     name: 'Github',
