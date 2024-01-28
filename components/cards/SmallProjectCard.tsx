@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-import { experienceInterface } from '@/content/project';
+import { projectInterface } from '@/content/project';
 
 type ProjectDataProps = {
-  data: experienceInterface;
+  data: projectInterface;
 };
 
 const SmallProjectCard = ({ data }: ProjectDataProps) => {
@@ -13,7 +13,7 @@ const SmallProjectCard = ({ data }: ProjectDataProps) => {
 
   return (
     <div
-      className={`w-full h-[270px] flex justify-center hover:cursor-pointer my-3 p-3 md:p-0 items-center overflow-hidden bg-[#f0f0f2] ${
+      className={`w-full h-[270px] flex justify-center hover:cursor-pointer hover:shadow-lg my-3 p-3 md:p-0 items-center overflow-hidden bg-[#f0f0f2] ${
         isinfo ? '' : ''
       }`}
     >
@@ -40,7 +40,7 @@ const SmallProjectCard = ({ data }: ProjectDataProps) => {
             <div
               className={`w-full h-[230px] rounded-lg bg-cover object-cover bg-center bg-no-repeat`}
               style={{
-                backgroundImage: `linear-gradient(to bottom, transparent, transparent, #f0f0f2), url(https://res.cloudinary.com/sambitsankalp/image/upload/v1704269368/NFTDocket_kcg2i7.png)`,
+                backgroundImage: `linear-gradient(to bottom, transparent, transparent, #000), url(${data.normalImage})`,
               }}
             ></div>
             <div className="w-full flex justify-between items-center mt-0 min-w-[50%]">

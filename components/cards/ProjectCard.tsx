@@ -2,20 +2,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import { experienceInterface } from '@/content/project';
+import { projectInterface } from '@/content/project';
 
 type ProjectDataProps = {
-  data: experienceInterface;
+  data: projectInterface;
+  style: string;
 };
 
-const ProjectCard = ({ data }: ProjectDataProps) => {
+const ProjectCard = ({ data, style }: ProjectDataProps) => {
   return (
     <div className="w-full flex justify-center hover:shadow-lg hover:cursor-pointer my-3 p-3 md:p-0 items-center min-h-[400px] overflow-hidden bg-[#f3f3f6] rounded-md ">
       <div
-        className={`w-full md:min-w-[800px] flex ${
-          data.style
-        } justify-center md:justify-between items-center md:items-start gap-5 md:gap-20 ${
-          data.style === 'normal'
+        className={`w-full md:min-w-[800px] flex ${style} justify-center md:justify-between items-center md:items-start gap-5 md:gap-20 ${
+          style === 'normal'
             ? `${
                 data.isWeb ? 'mr-0 md:mr-52 lg:mr-80' : 'mx-0 md:mx-52 lg:mx-80'
               } flex-col md:flex-row `
@@ -25,7 +24,7 @@ const ProjectCard = ({ data }: ProjectDataProps) => {
         }`}
       >
         <Image
-          src={data.image}
+          src={data.deviceImage}
           alt={data.title}
           width={500}
           height={200}
