@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, use, useEffect, useState } from 'react';
 
 import ProjectCard from '../cards/ProjectCard';
 import { projectData, projectInterface } from '@/content/project';
@@ -8,7 +8,16 @@ import SmallProjectCard from '../cards/SmallProjectCard';
 const Projects: FC = () => {
   const [selectedTags, setselectedTags] = useState<string[]>([]);
   const [requiredData, setrequiredData] = useState<projectInterface[]>([]);
+  const [isDesktop, setisDesktop] = useState(true);
   const tags = ['Web', 'App', 'ML'];
+
+  useEffect(() => {
+    let mQuery: MediaQueryList;
+    if (typeof window !== 'undefined') {
+      mQuery = window.matchMedia('(min-width: 768px)');
+      setisDesktop(mQuery.matches);
+    }
+  }, []);
 
   useEffect(() => {
     setrequiredData(
@@ -31,7 +40,7 @@ const Projects: FC = () => {
         {tags.map((tag, index) => (
           <div
             key={index}
-            className={`bg-transparent mr-3 py-1 px-4 rounded-md border border-black hover:bg-black cursor-pointer hover:text-white ${
+            className={`bg-transparent mr-3 py-1 px-4 text-sm md:text-base rounded-md border border-black hover:bg-black cursor-pointer hover:text-white ${
               selectedTags.includes(tag)
                 ? 'bg-black text-white'
                 : 'bg-transparent text-black'
@@ -48,17 +57,18 @@ const Projects: FC = () => {
           </div>
         ))}
       </div>
-      {(requiredData.length > 4 ? requiredData.slice(0, 4) : requiredData).map(
-        (project, index) => (
-          <ProjectCard
-            key={project.title}
-            data={project}
-            style={index % 2 === 0 ? 'normal' : 'reverse'}
-          />
-        )
-      )}
+      {(requiredData.length > 4 && isDesktop
+        ? requiredData.slice(0, 4)
+        : requiredData
+      ).map((project, index) => (
+        <ProjectCard
+          key={project.title}
+          data={project}
+          style={index % 2 === 0 ? 'normal' : 'reverse'}
+        />
+      ))}
       <div className="w-full grid grid-cols-2 gap-4">
-        {(requiredData.length > 4
+        {(requiredData.length > 4 && isDesktop
           ? requiredData.slice(4, requiredData.length)
           : []
         ).map((project, index) => (
